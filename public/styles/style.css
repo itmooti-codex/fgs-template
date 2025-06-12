@@ -1,0 +1,378 @@
+:root {
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --accent: #e83e8c;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --info: #17a2b8;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --neutral: #adb5bd;
+  --plyr-color-main: var(--primary);
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: 0;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: 0;
+}
+.state-disabled {
+  opacity: 50%;
+  pointer-events: none;
+}
+
+button {
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 12px !important;
+  line-height: normal;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  width: max-content;
+
+  &:not(.plyr__control) {
+    padding: 8px 10px !important;
+  }
+
+  &:hover {
+    background: var(--primary);
+    color: white;
+  }
+}
+
+.btn-bookmark {
+  margin-left: auto;
+}
+
+.btn-like.liked,
+.btn-bookmark.bookmarked {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.filter-btn.active {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.file-filter-menu {
+  display: none;
+}
+
+.file-filter-menu li:hover,
+.file-filter-menu li.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.file-filter.open .file-filter-menu {
+  display: block;
+}
+
+.sort-filter-menu {
+  display: none;
+}
+
+.sort-filter-menu li:hover,
+.sort-filter-menu li.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.sort-filter.open .sort-filter-menu {
+  display: block;
+}
+
+.toolbar {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.toolbar button {
+  padding: 4px 6px !important;
+  font-weight: bold;
+}
+
+/* Display emojis in a horizontal row with spacing */
+.emoji-picker {
+  display: flex;
+  gap: 8px;
+}
+
+.clearIcon.hidden {
+  display: none;
+}
+
+.search-wrapper,
+.editor {
+  border-radius: 4px;
+  transition: 0.2s ease-in-out;
+  border: 2px solid #ccc;
+}
+
+.search-wrapper:hover,
+.search-wrapper:focus-within {
+  border: 2px solid var(--primary);
+}
+
+#searchPost {
+  border: none;
+  outline: none;
+}
+
+.editor:focus-within,
+.editor:focus-visible,
+.editor:focus,
+.editor:active,
+.editor:hover {
+  border: 1px solid var(--primary) !important;
+  outline: 1px solid var(--primary) !important;
+}
+
+.filepond--root {
+  cursor: pointer;
+}
+
+.filepond--file,
+.filepond--image-preview {
+  background-color: var(--primary) !important;
+}
+
+.filepond--drop-label:hover {
+  cursor: pointer;
+  background: var(--primary);
+}
+
+.filepond--file-action-button {
+  background-color: var(--accent) !important;
+}
+
+.filepond--credits {
+  display: none;
+}
+
+.filepond--drop-label {
+  padding: 2em;
+  border-radius: 8px;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.filepond--panel-top,
+.filepond--panel-bottom,
+.filepond--panel-center {
+  background-color: var(--warning) !important;
+  cursor: pointer;
+}
+
+.plyr--audio {
+  background-color: var(--neutral) !important;
+  border: 1px solid var(--neutral) !important;
+}
+
+.children {
+  display: none;
+}
+
+.children.visible {
+  display: block;
+}
+
+.canvasWaveform {
+  margin-top: 1em;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  display: none;
+}
+.filepond--action-remove-item {
+  padding: 0 !important;
+}
+
+/* Allow the native controls to extend beyond the FilePond frame */
+.filepond--file {
+  overflow: visible !important;
+}
+
+/* Optional: Give your media preview a max-height so it stays tidy */
+.media-preview {
+  width: 100%;
+  max-height: 300px;
+}
+
+.mention {
+  background-color: #e4e6eb;
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.empty-state {
+  color: #555;
+  text-align: center;
+  padding: 1rem;
+}
+@media (max-width: 640px) {
+  .plyr__control[data-plyr="rewind"],
+  .plyr__control[data-plyr="fast-forward"],
+  .plyr__control[data-plyr="mute"],
+  .plyr__control[data-plyr="restart"],
+  .plyr_time,
+  .plyr__volume,
+  .plyr__control[data-plyr="pip"],
+  .plyr__control[data-plyr="fullscreen"] {
+    display: none !important;
+  }
+}
+/* file preview modal */
+#file-preview-modal {
+  display: none;
+}
+#file-preview-modal.show {
+  display: flex;
+}
+#create-post-modal {
+  display: none;
+}
+#create-post-modal.show {
+  display: flex;
+}
+
+#file-preview-modal img,
+#file-preview-modal video,
+#file-preview-modal audio,
+#file-preview-modal iframe {
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+/* Toast styles */
+#toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toast {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+}
+
+.toast.visible {
+  opacity: 1;
+}
+
+/* Style links inside post content and editor */
+.content a,
+.editor a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Skeleton loader styles */
+.skeleton-item {
+  animation: pulse 1.5s infinite;
+}
+
+.skeleton-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  background-color: #e0e0e0;
+}
+
+.skeleton-line {
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+.skeleton-line.short {
+  width: 30%;
+}
+.skeleton-line.medium {
+  width: 60%;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.notification.unread {
+  background-color: #f0f4ff;
+}
+
+.notification.read {
+  background-color: #fff;
+}
+
+.notification:hover {
+  background-color: #f1f5f9;
+}
+
+[x-tooltip] {
+  position: relative;
+}
+
+[x-tooltip]:hover::after {
+  content: attr(x-tooltip);
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+  background: #333;
+  color: white;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.tabs button {
+  padding: 8px 16px;
+  margin-right: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  color: black;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.tabs button.active {
+  background-color: var(--primary);
+  color: white;
+}
