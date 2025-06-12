@@ -32,6 +32,7 @@
 </head>
 
 <body x-data="{
+    openSettings:false,
     showNotifications: false,
     showSettings: false,
     prefs: {
@@ -122,10 +123,10 @@
     </div>
 
     <!-- Settings Panel -->
-    <div x-show="showSettings" x-transition class="absolute right-0 mt-2 w-96 bg-white rounded-lg shadow-lg z-50 p-4">
+    <div x-show="openSettings" x-transition class="absolute right-0 mt-2 w-96 bg-white rounded-lg shadow-lg z-50 p-4">
       <div class="flex items-center justify-between mb-4">
         <h3 class="font-semibold text-lg">Notification Preferences</h3>
-        <button @click="closeSettings" x-tooltip="'Close'" class="hover:text-red-500 text-gray-500"><i
+        <button @click="openSettings=false" x-tooltip="'Close'" class="hover:text-red-500 text-gray-500"><i
             class="fa-solid fa-xmark"></i></button>
       </div>
 
