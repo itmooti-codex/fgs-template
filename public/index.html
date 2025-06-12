@@ -48,7 +48,7 @@
     </button>
 
     <!-- Notification Panel -->
-    <div x-show="showNotifications" x-transition
+    <div x-show="showNotifications" x-transition @click.outside="showNotifications = false"
       class="absolute right-0 mt-2 w-96 bg-white rounded-lg shadow-lg z-50 p-4">
       <div class="flex items-center justify-between mb-3">
         <h3 class="font-semibold text-lg">Notifications</h3>
