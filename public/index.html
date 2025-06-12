@@ -47,7 +47,27 @@
       class="p-2 bg-white rounded-full shadow-md hover:bg-gray-100 focus:outline-none">
       <i class="fa-solid fa-bell text-gray-600"></i>
     </button>
+<div x-data="{
+      hasUnread: false,
+      init() {
+        this.checkUnread();
+        this.$watch('hasUnread', value => {
+        });
 
+        setInterval(() => {
+          this.checkUnread();
+        }, 1000);
+      },
+      checkUnread() {
+        const container = document.getElementById('notificationContainerSocket');
+        this.hasUnread = container && container.querySelector('.unread') !== null;
+      }
+    }" x-show="hasUnread" x-cloak class="absolute top-0 right-0 -mt-1 -mr-1">
+  <span class="relative flex size-2">
+    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
+    <span class="relative inline-flex size-2 rounded-full bg-red-500"></span>
+  </span>
+</div>
     <!-- Notification Panel -->
     <div x-show="showNotifications" x-transition @click.outside="showNotifications = false"
       class="absolute right-0 mt-2 w-96 bg-white rounded-lg shadow-lg z-50 p-4">
