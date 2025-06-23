@@ -1,0 +1,496 @@
+:root {
+  --color-primary: #0963D8;
+  /* Basic Colors */
+  --color-primary-shade: #E7F1FE;
+  --color-grey: #737373;
+  --color-black: #0E0E0E;
+  --color-white: #FFFFFF;
+
+  /* Grey Shades */
+  --grey-100: #737373;
+  --grey-200: #D9D9D9;
+  --grey-300: #F4F1F1;
+
+  /* Danger Shades */
+  --danger-100: #AB0707;
+  --danger-200: #DC0A0A;
+  --danger-300: #FDD0D1;
+
+  /* Success Shades */
+  --success-100: #035933;
+  --success-200: #059E5A;
+  --success-300: #A6FCD6;
+
+  /* Warning Shades */
+  --warning-100: #594203;
+  --warning-200: #BB8B06;
+  --warning-300: #FCE5A6;
+  --plyr-color-main: var(--color-primary);
+}
+
+/* Hide default FilePond drop area visuals */
+.filepond--drop-label,
+.filepond--panel-root {
+  display: none !important;
+}
+
+.h1 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 38px;
+  font-family: 'Inter', sans-serif;
+}
+
+.h2 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  font-family: 'Inter', sans-serif;
+}
+
+.h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.p1 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.p2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.p3 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: rgba(244, 241, 241, 1);
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: 0;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: 0;
+}
+
+.state-disabled {
+  opacity: 50%;
+  pointer-events: none;
+}
+
+
+.canvasWaveform:empty {
+  display: none;
+}
+button:not(.file-preview button):hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-bookmark {
+  margin-left: auto;
+}
+
+.btn-comment:hover,
+.btn-like:hover,
+.btn-bookmark:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.btn-comment:hover svg path,
+.btn-like:hover svg path,
+.btn-bookmark:hover svg path {
+  fill: var(--color-primary);
+}
+
+.btn-like.liked,
+.btn-bookmark.bookmarked {
+  color: var(--color-primary);
+}
+
+.btn-like.liked path,
+.btn-bookmark.bookmarked path {
+  fill: var(--color-primary);
+}
+
+.file-filter-menu {
+  display: none;
+}
+
+.file-filter-menu li:hover,
+.file-filter-menu li.active {
+  background-color: var(--color-primary-shade);
+  color: black;
+}
+
+.file-filter.open .file-filter-menu {
+  display: block;
+}
+
+.sort-filter-menu {
+  display: none;
+}
+
+.sort-filter-menu li:hover,
+.sort-filter-menu li.active {
+  background-color: var(--color-primary-shade);
+  color: black;
+}
+
+.sort-filter.open .sort-filter-menu {
+  display: block;
+}
+
+.toolbar {
+  display: flex;
+  gap: 0.25rem;
+}
+
+
+.emoji-wrapper{
+  width: 100%;
+}
+
+/* Display emojis in a horizontal row with spacing */
+.emoji-picker {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.clearIcon.hidden {
+  display: none;
+}
+
+.search-wrapper {
+  border-radius: 4px;
+  transition: 0.2s ease-in-out;
+  border: 1px solid #ccc;
+}
+
+.search-wrapper:hover,
+.search-wrapper:focus-within {
+  border: 1px solid var(--color-primary);
+}
+
+#searchPost {
+  border: none;
+  outline: none;
+}
+
+.filepond--root {
+  cursor: pointer;
+}
+
+.filepond--file,
+.filepond--image-preview {
+  background-color: var(--color-primary) !important;
+}
+
+.filepond--drop-label:hover {
+  cursor: pointer;
+  background: var(--color-primary);
+}
+
+.filepond--file-action-button {
+  background-color: var(--danger-100) !important;
+}
+
+.filepond--credits {
+  display: none;
+}
+
+.filepond--drop-label {
+  padding: 2em;
+  border-radius: 8px;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.filepond--panel-top,
+.filepond--panel-bottom,
+.filepond--panel-center {
+  background-color: var(--warning-200) !important;
+  cursor: pointer;
+}
+
+.plyr--audio {
+  background-color: var(--grey-200) !important;
+  border: 1px solid var(--grey-200) !important;
+}
+
+.children {
+  display: none;
+}
+
+.children.visible {
+  display: block;
+}
+
+.canvasWaveform {
+  margin-top: 1em;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  display: none;
+}
+
+.filepond--action-remove-item {
+  padding: 0 !important;
+}
+
+/* Allow the native controls to extend beyond the FilePond frame */
+.filepond--file {
+  overflow: visible !important;
+}
+
+/* Optional: Give your media preview a max-height so it stays tidy */
+.media-preview {
+  width: 100%;
+  max-height: 300px;
+}
+
+.mention {
+  background-color: #e4e6eb;
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.empty-state {
+  color: #555;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 640px) {
+
+  .plyr__control[data-plyr="rewind"],
+  .plyr__control[data-plyr="fast-forward"],
+  .plyr__control[data-plyr="mute"],
+  .plyr__control[data-plyr="restart"],
+  .plyr_time,
+  .plyr__volume,
+  .plyr__control[data-plyr="pip"],
+  .plyr__control[data-plyr="fullscreen"] {
+    display: none !important;
+  }
+}
+
+/* file preview modal */
+#file-preview-modal {
+  display: none;
+}
+
+#file-preview-modal.show {
+  display: flex;
+}
+
+#create-post-modal {
+  display: none;
+}
+
+#create-post-modal.show {
+  display: flex;
+}
+
+#file-preview-modal img,
+#file-preview-modal video,
+#file-preview-modal audio,
+#file-preview-modal iframe {
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+/* Toast styles */
+#toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toast {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+}
+
+.toast.visible {
+  opacity: 1;
+}
+
+/* Style links inside post content and editor */
+.content .contentA,
+.editor a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.editor{
+  font-size: 16px !important;
+}
+
+/* Skeleton loader styles */
+.skeleton-item {
+  animation: pulse 1.5s infinite;
+}
+
+.skeleton-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  background-color: #e0e0e0;
+}
+
+.skeleton-line {
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+.skeleton-line.short {
+  width: 30%;
+}
+
+.skeleton-line.medium {
+  width: 60%;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.notification.unread {
+  background-color: #f0f4ff;
+}
+
+.notification.read {
+  background-color: #fff;
+}
+
+.notification:hover {
+  background-color: #f1f5f9;
+}
+
+[x-tooltip] {
+  position: relative;
+}
+
+[x-tooltip]:hover::after {
+  content: attr(x-tooltip);
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+  background: #333;
+  color: white;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.tabs button {
+  padding: 8px 16px;
+  margin-right: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  color: black;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.tabs button.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.filepond--action-remove-item {
+  padding: 0 !important;
+}
+
+/* plyr js  */
+.plyr--audio {
+  border-radius: 4px !important;
+}
+
+.plyr--audio .plyr__controls {
+  background: white !important;
+  border-radius: 4px !important;
+  padding: 8px !important;
+}
+
+/* Collapsed comment styling with ribbon */
+/* .commentContainer.has-replies.is-collapsed {
+  border-left: 1px solid var(--color-primary);
+} */
+
+.reply-ribbon {
+  margin-left: 12px;
+  color: var(--color-primary);
+}
+
+.commentContainer.has-replies.is-collapsed .reply-ribbon {
+  padding-left: 0;
+}
+.mainComment {
+  position: relative;
+  z-index: 1;
+}
+
+.mainComment::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  pointer-events: none;
+  /* Line styles applied dynamically */
+}
+/* Dropdown UI */
+
+
+.tribute-container{
+  max-height: 150px !important;
+}
